@@ -9,10 +9,10 @@ See main.swift for example:
 ```
 // Create example command line interface commands that needs to be run chained / piped
 let psefCommand = CliCommand(launchPath: "/bin/ps", arguments: ["-e", "-f"])
-let grepMailCommand = CliCommand(launchPath: "/usr/bin/grep", arguments: ["mdworker"])
+let grepMdworkerCommand = CliCommand(launchPath: "/usr/bin/grep", arguments: ["mdworker"])
 
 // Prepare cli command runner
-let chainedCommand = CliCommandRunner(commands: [psefCommand, grepMailCommand])
+let chainedCommand = CliCommandRunner(commands: [psefCommand, grepMdworkerCommand])
 
 // Prepare result tuple
 var chainedCommandResult: String?
